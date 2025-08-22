@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSwap — Learn. Teach. Earn.</title>
+  <meta name="description" content="SkillSwap is a peer-to-peer Discord community where African youth exchange skills, build real projects, and grow together." />
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="SkillSwap — Learn. Teach. Earn." />
+  <meta property="og:description" content="SkillSwap is a peer-to-peer Discord community where African youth exchange skills, build real projects, and grow together." />
+  <meta property="og:image" content="banner.jpg" />
+  <meta property="og:url" content="https://skillswap.brightosei.com" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <!-- Tailwind CSS (for development). In production, use a purged build: styles.css -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Utility for skip-link focus state */
+    .skip-link { 
+      position: absolute; left: 1rem; top: 1rem;
+      background: #fff; color: #000;
+      padding: 0.5rem 1rem; border-radius: 0.25rem;
+      transform: translateY(-150%); transition: transform 0.3s;
+      z-index: 50;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s ease-out, transform 1s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800" aria-label="Primary">
+    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <a href="/" class="text-2xl font-bold">SkillSwap</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="hover:underline">About</a></li>
+        <li><a href="#benefits" class="hover:underline">Benefits</a></li>
+        <li><a href="#faq" class="hover:underline">FAQ</a></li>
+        <li>
+          <a href="https://discord.gg/cuGR6YnhA4" target="_blank" rel="noopener noreferrer"
+             class="px-4 py-2 bg-yellow-500 text-gray-900 rounded hover:bg-yellow-600 transition">
+            Join Discord
+          </a>
+        </li>
+      </ul>
+      <!-- Mobile menu button (to implement) -->
+      <button class="md:hidden" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <header id="hero" class="relative">
+    <picture>
+      <source srcset="banner.jpg" type="image/webp">
+      <img
+        src="banner.jpg"
+        alt="Young African creatives collaborating over laptops in a futuristic network"
+        class="w-full h-72 object-cover brightness-75"
+      />
+    </picture>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-white">SkillSwap</h1>
+      <p class="text-lg md:text-xl mt-2 max-w-xl fade-in">A peer-to-peer community where African youth exchange skills, build real projects, and grow together.</p>
+      <a
+        href="https://discord.gg/cuGR6YnhA4"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-block px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded shadow hover:bg-yellow-600 transition fade-in"
+      >
+        Join Our Discord
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center fade-in" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="text-3xl font-bold mb-4">What is SkillSwap?</h2>
+      <p class="text-gray-300 leading-relaxed">
+        SkillSwap is a youth-led Discord community for learning, teaching, and collaborating on real projects. There’s always someone here to learn from and someone waiting to learn from you.
+      </p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="bg-gray-800 py-12 px-6 fade-in" aria-labelledby="benefits-heading">
+      <h2 id="benefits-heading" class="text-3xl font-bold text-center mb-8">Benefits</h2>
+      <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">💡 Learn from Peers</h3>
+          <p class="text-gray-400">Pick up new digital skills and get real feedback from community members.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🔁 Swap Your Skills</h3>
+          <p class="text-gray-400">Offer your talent in exchange for another. No money needed — just knowledge.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🚀 Grow Together</h3>
+          <p class="text-gray-400">Get access to workshops, mentorships, templates, and job alerts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-6 max-w-4xl mx-auto fade-in" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold mb-6 text-center">FAQs</h2>
+      <div class="space-y-4 text-gray-300">
+        <figure>
+          <blockquote>
+            <h4 class="font-semibold">How do I join?</h4>
+            <p>Click the “Join Our Discord” button and follow the onboarding steps inside the server.</p>
+          </blockquote>
+        </figure>
+        <figure>
+          <blockquote>
+            <h4 class="font-semibold">Is it free?</h4>
+            <p>Yes! Skill swapping is free. There are optional premium features for mentorships and resources.</p>
+          </blockquote>
+        </figure>
+        <figure>
+          <blockquote>
+            <h4 class="font-semibold">Can I offer something even if I’m a beginner?</h4>
+            <p>Absolutely. Everyone has something to offer — even just your time or ideas.</p>
+          </blockquote>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 text-center py-6 text-sm">
+    © 2025 SkillSwap | Empowering African Creators
+  </footer>
+
+  <!-- Intersection Observer for fade-in animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { rootMargin: '0px 0px -100px 0px' }
+      );
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
